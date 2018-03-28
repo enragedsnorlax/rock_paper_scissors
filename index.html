@@ -2,60 +2,45 @@
 <html lang="en">
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="css.css">
   <meta charset="utf-8"/>
   <title>Rock Paper Scissors</title>
-  <script type="text/javascript">
-    let playerScore = 0
-    let computerScore = 0
-
-    function computerPlay(){
-      let randomNumber = Math.floor(Math.random()*3 );
-      if (randomNumber === 0){
-        return "rock"
-      }else if(randomNumber === 1){ 
-        return "paper"
-      }else{
-        return "scissors"
-      }
-          }
-
-    function playRound(playerSelection, computerSelection){
-      
-      if (((computerSelection == "rock") && (playerSelection == "scissors")) || ((computerSelection == "paper") && (playerSelection == "rock")) || ((computerSelection == "scissors") && (playerSelection == "paper"))){
-        		computerScore++;
-        		console.log(' Computer wins! ' + computerSelection + ' beats ' + playerSelection)
-      }else if (computerSelection == playerSelection){
-        		console.log("It's a tie!")
-      }else if (((computerSelection == "rock") && (playerSelection == "paper")) || ((computerSelection == "paper") && (playerSelection == "scissors")) || ((computerSelection == "scissors") && (playerSelection == "rock")))
-      {
-        		playerScore++;
-        		console.log(' Winner! ' + playerSelection + ' beats ' + computerSelection)
-      } else{
-      			console.log(playerSelection + ' is not an option! ' + ' Pick rock, paper, or scissors! ')
-      }
-
-
-
-    }
-    function game(){
-    	for(i = 0; i < 5; i++){
-    	   	let playerSelection = prompt("rock, paper, scissors?").toLowerCase();
-           	const computerSelection = computerPlay();
-    	   	playRound(playerSelection, computerSelection);
-    	   	console.log("Player: " + playerScore + " Computer: " + computerScore);
-    	} if (playerScore > computerScore){
-    		console.log('You win this round!');
-    	} else if (computerScore > playerScore){
-    		console.log('Sorry you lose this round try again!');
-    	} else{
-    		console.log("Close but it's a tie! try again");
-    	}
-    }
-    
-    	game();
-    	
-  </script>
 </head>
 <body>
+
+<div id="everything">
+<div id="scoreBox">
+	<div id ="showPlayerScore">
+		<h2>Player Score</h2>
+		<div id="player-score" class="number">
+			0
+    	</div>
+	</div>
+    <div id ="showComputerScore">
+		<h2>Computer Score</h2>
+		<div id="computer-score" class="number">
+			0
+    	</div>
+	</div>
+</div>
+
+    <div id="results">
+    	<h2>Game Results</h2>
+    	<p id="playerMove">Click your choice</p>
+    	<p id="computerMove">To play</p>
+    	<p id="outcome">Rock, paper, scissors!</p>
+    </div>
+    <div id="container">
+		<button id="btn1">Rock</button>
+		<button id="btn2">Paper</button>
+		<button id="btn3">Scissors</button>
+	</div>
+    <div>
+    	<button id="reset">Reset</button>
+    </div>
+</div>
+
+		<script src="scripts.js"></script>
+
 </body>
 </html> 

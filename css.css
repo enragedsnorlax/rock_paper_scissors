@@ -1,0 +1,108 @@
+body {
+	position:absolute;
+	margin:0;
+	text-align: center;
+    max-width: 100%;
+    width:100%;
+    overflow-x: hidden;
+	top: 150px;
+
+}
+#container{
+	position:relative;
+
+}
+.number{
+	position:relative;
+	height:60px;
+	margin:auto;
+	width:60px;
+	font-size: 50px;
+	border-radius:30%;
+	box-shadow: 3px 3px;
+	background:#ffbfbf;
+	opacity: .8;
+}
+#showPlayerScore{
+	position:relative;
+	top: 115px;
+	right: 100px;
+}
+#results{
+	position:relative;
+	margin: 10px auto;
+	font-family: monospace;
+	border: 1px solid black;
+	width: 18%;
+	top: 5px;
+
+}
+h2{
+	font-family: monospace;
+
+}
+
+#showComputerScore{
+	position:relative;
+	left:100px;
+
+
+}
+#btn1{
+	position:relative;
+	margin:15px;
+	height: 90px;
+	width: 95px;
+	border-radius:50%;
+	background:#ffc5c6;
+	font-family: monospace;
+	box-shadow: 1px 1px #080505;
+	border:solid 1px black;
+	font-weight:800;
+	font-size: 15px;
+	color:black;
+
+}
+#btn2{
+	position:relative;
+	margin:15px;
+	height: 90px;
+	width: 95px;
+	border-radius:50%;
+	background:#ffc5c6;
+	font-family: monospace;
+	box-shadow: 1px 1px #080505;
+	border:solid 1px black;
+	font-weight:800;
+	font-size: 15px;
+	color:black;
+}
+#btn3{
+	position:relative;
+	margin:15px;
+	height: 90px;
+	width: 95px;
+	border-radius:50%;
+	background:#ffc5c6;
+	font-family: monospace;
+	box-shadow: 1px 1px #080505;
+	border:solid 1px black;
+	font-weight:800;
+	font-size: 15px;
+	color:black;
+}
+#everything{
+	position:relative;
+	background-color: #ffdddd;
+
+}
+#reset{
+	border:2px solid black;
+	border-radius: 15%;
+    font-weight: 700;
+    font-family:monospace;
+    box-shadow: 0.5px 0.5px #080505;
+	padding: 10px;
+	margin: 20px;
+	background: #ffbfbf;
+}

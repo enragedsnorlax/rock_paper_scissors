@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Rock Paper Scissors</title>
+  <script type="text/javascript">
+    
+        /* variables to track scores*/
+    let playerScore = 0
+    let computerScore = 0
+                
+        /* randomised computer play*/
+
+    function computerPlay(){
+      let randomNumber = Math.floor(Math.random()*3 );
+      if (randomNumber === 0){
+        return "rock"
+      }else if(randomNumber === 1){ 
+        return "paper"
+      }else{
+        return "scissors"
+      }
+          }
+        /* plays a single round of the game and logs results based on outcome */
+    function playRound(playerSelection, computerSelection){
+      
+      if (((computerSelection == "rock") && (playerSelection == "scissors")) || ((computerSelection == "paper") && (playerSelection == "rock")) || ((computerSelection == "scissors") && (playerSelection == "paper"))){
+        		computerScore++;
+        		console.log(' Computer wins! ' + computerSelection + ' beats ' + playerSelection)
+      }else if (computerSelection == playerSelection){
+        		console.log("It's a tie!")
+      }else if (((computerSelection == "rock") && (playerSelection == "paper")) || ((computerSelection == "paper") && (playerSelection == "scissors")) || ((computerSelection == "scissors") && (playerSelection == "rock")))
+      {
+        		playerScore++;
+        		console.log(' Winner! ' + playerSelection + ' beats ' + computerSelection)
+      } else{
+      			console.log(playerSelection + ' is not an option! ' + ' Pick rock, paper, or scissors! ')
+      }
+
+           
+        /* loops the playRound function 5 times and displays winner based on score*/
+    }
+    function game(){
+    	for(i = 0; i < 5; i++){
+    	   		let playerSelection = prompt("rock, paper, scissors?").toLowerCase();
+           		const computerSelection = computerPlay();
+    	   		playRound(playerSelection, computerSelection);
+    	   	console.log("Player: " + playerScore + " Computer: " + computerScore);
+    	} if (playerScore > computerScore){
+    		console.log('You win this round!');
+    	} else if (computerScore > playerScore){
+    		console.log('Sorry you lose this round try again!');
+    	} else{
+    		console.log("Close but it's a tie! try again");
+    	}
+    }
+        /* executes the game*/
+    	game();
+    	
+  </script>
+</head>
+<body>
+</body>
+</html> 
